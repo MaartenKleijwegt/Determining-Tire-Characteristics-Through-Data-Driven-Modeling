@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Paper.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for producing ASME-format journal articles using LaTeX    %
+% Written by   Harry H. Cheng, Professor and Director                %
+%              Integration Engineering Laboratory                    %
+%              Department of Mechanical and Aeronautical Engineering %
+%              University of California                              %
+%              Davis, CA 95616                                       %
+%              Tel: (530) 752-5020 (office)                          %
+%                   (530) 752-1028 (lab)                             %
+%              Fax: (530) 752-4158                                   %
+%              Email: hhcheng@ucdavis.edu                            %
+%              WWW:   http://iel.ucdavis.edu/people/cheng.html       %
+%              May 7, 1994                                           %
+% Modified: February 16, 2001 by Harry H. Cheng                      %
+% Modified: January  01, 2003 by Geoffrey R. Shiflett                %
+% Use at your own risk, send complaints to /dev/null                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% use twocolumn and 10pt options with the asme2e format
+\documentclass[twocolumn,10pt]{asme2e}
+
+\makeatletter
+\let\asme@citex\@citex % save amse2e definition of \@citex
+\makeatother
+
+\usepackage{textcomp}
+\usepackage[USenglish]{babel}    % English
+
+\makeatletter
+\let\@citex\asme@citex % restore
+\makeatother
+\usepackage{float}
+\usepackage[ansinew]{inputenc}   % Output glyphs like 'ö' at all
+%\usepackage[T1]{fontenc}        % Output glyphs like 'ö' in a nice font
+\usepackage{graphicx}            % For loading graphic files
+%\usepackage{a4wide}             % Smaller margins = more text per page.
+\usepackage{fancyhdr}            % Fancy headings
+\usepackage{longtable}           % For tables, that exceed one page
+\usepackage{xspace}              % Geeft spaties na commando's die dat behoeven
+%\usepackage{titling}
+\usepackage{standalone}
+\usepackage{subcaption}
+
+\usepackage{mathtools}             % Math packages
+\let\proof\relax 
+\let\endproof\relax
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{fancyhdr} 
+\fancyhf{}
+\cfoot{\thepage}
+\pagestyle{fancy}    
+
+%% The class has several options
+%  onecolumn/twocolumn - format for one or two columns per page
+%  10pt/11pt/12pt - use 10, 11, or 12 point font
+%  oneside/twoside - format for oneside/twosided printing
+%  final/draft - format for final/draft copy
+%  cleanfoot - take out copyright info in footer leave page number
+%  cleanhead - take out the conference banner on the title page
+%  titlepage/notitlepage - put in titlepage or leave out titlepage
+%  
+%% The default is oneside, onecolumn, 10pt, final
+
+
+\title{Determining Tire Characteristics Through Data Driven Modeling}
+
+%%% first author
+\author{Eugene Figueiras
+    \affiliation{
+	BSC student\\
+	TU Delft\\
+    SN:4257669 
+    }	
+}
+
+%%% second author
+%%% remove the following entry for single author papers
+%%% add more entries for additional authors
+\author{Maarten Kleijwegt
+    \affiliation{
+	BSC student\\
+	TU Delft\\
+    SN:4113810 
+    }	
+}
+
+%%% third author
+%%% remove the following entry for single author papers
+%%% add more entries for additional authors
+\author{Nol R{\"o}mer
+    \affiliation{
+	BSC student\\
+	TU Delft\\
+    SN: 4391888
+    }	
+}
+
+\author{Akash Soerdjbalie
+    \affiliation{
+	BSC student\\
+	TU Delft\\
+    SN: 4227174
+    }	
+}
+
+\begin{document}
+
+\maketitle    
+
+\input{abstract.tex}
+\input{introduction.tex}
+\input{modelling.tex}
+\input{experiment.tex}
+\input{discussion.tex}
+\input{conclusion.tex}
+\input{recommendations.tex}
+\input{acknowledgements.tex}
+\input{references.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\end{document}
